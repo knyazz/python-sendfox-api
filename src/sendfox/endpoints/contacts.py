@@ -25,7 +25,7 @@ class Contacts(BaseApi):
         :param get_all: Should the query get all results
         :type get_all: :py:class:`bool`
         :param queryparams: The query string parameters
-        queryparams['emails'] = email
+        queryparams['email'] = email
         """
         self.contact_id = None
         _func = self._iterate if get_all else self._client._get
@@ -48,8 +48,8 @@ class Contacts(BaseApi):
             "lists": string*,
         }
         """
-        if "name" not in data:
-            raise KeyError("The list must have a name")
+        if "email" not in data:
+            raise KeyError("The contact must have a email")
 
         response = self._client._post(url=self._build_path(), data=data)
 
