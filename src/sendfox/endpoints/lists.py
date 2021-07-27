@@ -68,5 +68,5 @@ class Lists(BaseApi):
         :type contact_id: :py:class:`str`
         """
         self.list_id = list_id
-        return self._mc_client._delete(url=self._build_path(
+        return self._client._delete(url=self._build_path(
             list_id, 'contacts', contact_id))

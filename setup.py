@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="python-sendfox-api",
-    version="0.1.2",
+    version="0.1.3",
     author="Smirnov.EV",
     author_email="knyazz@gmail.com",
     url="https://github.com/knyazz/python-sendfox-api",
